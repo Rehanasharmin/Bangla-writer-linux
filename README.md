@@ -9,7 +9,7 @@ A production-ready Bangla input method for Linux that converts Romanized Bengali
 ```bash
 # Clone the repository
 git clone https://github.com/Rehanasharmin/Bangla-writer-linux.git
-cd bangla-writer
+cd Bangla-writer-linux
 
 # Run the one-click installer
 chmod +x install.sh
@@ -45,7 +45,7 @@ sudo apt-get update
 sudo apt-get install -y ibus ibus-m17n m17n-db fontconfig git make
 
 # Install BanglaWriter
-cd bangla-writer
+cd Bangla-writer-linux
 sudo make install
 
 # Restart IBUS
@@ -59,7 +59,7 @@ ibus restart
 sudo dnf install -y ibus ibus-m17n m17n-db fontconfig git make
 
 # Install BanglaWriter
-cd bangla-writer
+cd Bangla-writer-linux
 sudo make install
 
 # Restart IBUS
@@ -73,7 +73,7 @@ ibus restart
 sudo pacman -Sy ibus m17n-db fontconfig git make
 
 # Install BanglaWriter
-cd bangla-writer
+cd Bangla-writer-linux
 sudo make install
 
 # Restart IBUS
@@ -85,7 +85,7 @@ ibus restart
 For systems where you cannot use sudo:
 
 ```bash
-cd bangla-writer
+cd Bangla-writer-linux
 make user-install
 
 # Add to ~/.bashrc:
@@ -177,7 +177,7 @@ make test
 Or run manually:
 
 ```bash
-cd bangla-writer
+cd Bangla-writer-linux
 python3 test_engine.py
 ```
 
@@ -189,7 +189,7 @@ Expected output should show all tests passing for core functionality like:
 ## Uninstalling
 
 ```bash
-cd bangla-writer
+cd Bangla-writer-linux
 sudo make uninstall
 
 # Log out and log back in
@@ -252,7 +252,7 @@ source ~/.bashrc
 ## Project Structure
 
 ```
-bangla-writer/
+Bangla-writer-linux/
 ├── install.sh           # One-click installer script
 ├── Makefile             # Build and installation automation
 ├── test_engine.py       # Transliteration tests
