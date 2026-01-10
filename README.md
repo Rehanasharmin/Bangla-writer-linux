@@ -8,7 +8,7 @@ A production-ready Bangla input method for Linux that converts Romanized Bengali
 
 ```bash
 # Clone the repository
-git clone https://github.com/yourusername/bangla-writer.git
+git clone https://github.com/Rehanasharmin/Bangla-writer-linux.git
 cd bangla-writer
 
 # Run the one-click installer
