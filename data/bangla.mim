@@ -1,0 +1,306 @@
+;; -*-coding: utf-8 -*-
+;; BanglaWriter M17N input method
+;; Phonetic transliteration for Bengali typing
+;;
+;; Usage: This file should be placed in ~/.m17n.d/ or /usr/share/m17n/
+;; It will be automatically loaded by IBUS-m17n
+;;
+
+(input-method bangla banglawriter)
+
+(description "BanglaWriter - Phonetic Bengali Input Method
+
+This input method allows you to type Bengali using Roman characters
+following standard phonetic transliteration rules.
+
+Examples:
+  ami    -> আমি
+  vhalo  -> ভালো
+  bangla -> বাংলা
+  desh   -> দেশ
+
+Features:
+  - Phonetic typing (type as you speak)
+  - Automatic conjunct formation
+  - Context-aware vowel handling
+  - Support for common Bangla words
+
+Keyboard Shortcuts:
+  Ctrl+Space - Toggle input method
+  Alt+Shift  - Switch keyboard layout
+")
+
+(title "BanglaWriter")
+
+(map
+ (trans
+  
+  ;; Vowels - standalone (at word start)
+  ("a" "আ")
+  ("A" "আ")
+  ("aa" "আ")
+  ("i" "ই")
+  ("I" "ঈ")
+  ("ee" "ঈ")
+  ("u" "উ")
+  ("U" "ঊ")
+  ("oo" "ঊ")
+  ("ri" "ঋ")
+  ("R" "ঋ")
+  ("e" "এ")
+  ("ai" "ঐ")
+  ("oi" "ঐ")
+  ("o" "ও")
+  ("O" "ঔ")
+  ("ou" "ঔ")
+  
+  ;; Consonants
+  ("k" "ক")
+  ("K" "খ")
+  ("g" "গ")
+  ("G" "ঘ")
+  ("c" "চ")
+  ("C" "ছ")
+  ("j" "জ")
+  ("J" "ঝ")
+  ("T" "ট")
+  ("D" "ড")
+  ("N" "ণ")
+  ("t" "ত")
+  ("d" "দ")
+  ("n" "ন")
+  ("p" "প")
+  ("P" "ফ")
+  ("b" "ব")
+  ("B" "ভ")
+  ("v" "ভ")
+  ("V" "ভ")
+  ("m" "ম")
+  ("y" "য")
+  ("Y" "য়")
+  ("r" "র")
+  ("l" "ল")
+  ("s" "স")
+  ("S" "শ")
+  ("h" "হ")
+  
+  ;; Aspirated consonants
+  ("kh" "খ")
+  ("gh" "ঘ")
+  ("ch" "ছ")
+  ("jh" "ঝ")
+  ("th" "থ")
+  ("TH" "ঠ")
+  ("dh" "ঢ")
+  ("DH" "ঢ")
+  ("ph" "ফ")
+  ("bh" "ভ")
+  ("vh" "ভ")
+  ("sh" "শ")
+  ("Sh" "ষ")
+  ("hh" "হ")
+  
+  ;; Special consonants
+  ("rh" "ড়")
+  ("rrh" "ঢ়")
+  ("ng" "ং")
+  ("ny" "ঞ")
+  
+  ;; Dependent vowel signs (after consonant)
+  ("aa1" "া")
+  ("A1" "া")
+  ("i1" "ি")
+  ("I1" "ী")
+  ("ee1" "ী")
+  ("u1" "ু")
+  ("U1" "ূ")
+  ("oo1" "ূ")
+  ("ri1" "ৃ")
+  ("R1" "ৃ")
+  ("e1" "ে")
+  ("ai1" "ৈ")
+  ("oi1" "ৈ")
+  ("o1" "ো")
+  ("O1" "ৌ")
+  ("ou1" "ৌ")
+  
+  ;; Conjunct consonants
+  ("kk" "ক্ক")
+  ("kkh" "ক্খ")
+  ("kg" "ক্গ")
+  ("kc" "ক্চ")
+  ("kj" "ক্জ")
+  ("kt" "ক্ট")
+  ("kn" "ক্ণ")
+  ("kp" "ক্প")
+  ("kb" "ক্ব")
+  ("km" "ক্ম")
+  ("kl" "ক্ল")
+  ("ks" "ক্স")
+  
+  ("gg" "গ্গ")
+  ("gn" "গ্ন")
+  ("gm" "গ্ম")
+  ("gl" "গ্ল")
+  
+  ("jj" "জ্জ")
+  ("jn" "জ্ঞ")
+  ("jm" "জ্ম")
+  
+  ("TT" "ট্ট")
+  ("Tth" "ট্থ")
+  ("Tn" "ট্ণ")
+  
+  ("DD" "ড্ড")
+  ("Dn" "ড্ন")
+  ("Dm" "ড্ম")
+  
+  ("ngk" "ঙ্ক")
+  ("ngg" "ঙ্গ")
+  ("ngj" "ঙ্ঞ")
+  
+  ("ttt" "ত্ত")
+  ("tth" "ত্থ")
+  ("tnn" "ত্ন")
+  ("tm" "ত্ম")
+  ("tl" "ত্ল")
+  ("ts" "ত্স")
+  
+  ("ddd" "দ্দ")
+  ("ddh" "দ্ধ")
+  ("dnn" "দ্ন")
+  ("dm" "দ্ম")
+  ("dl" "দ্ল")
+  
+  ("pp" "প্প")
+  ("pl" "প্ল")
+  ("pn" "প্ন")
+  ("pm" "প্ম")
+  
+  ("bb" "ব্ব")
+  ("bj" "ব্জ")
+  ("bd" "ব্দ")
+  ("bm" "ব্ম")
+  ("bl" "ব্ল")
+  ("bhy" "ভ্য")
+  
+  ("mm" "ম্ম")
+  ("ml" "ম্ল")
+  
+  ("lk" "ল্ক")
+  ("lg" "ল্গ")
+  ("lj" "ল্জ")
+  ("ld" "ল্ড")
+  ("lnn" "ল্ন")
+  ("lm" "ল্ম")
+  ("ll" "ল্ল")
+  
+  ("shk" "শ্ক")
+  ("shT" "শ্ট")
+  ("shn" "শ্ন")
+  ("shm" "শ্ম")
+  ("shl" "শ্ল")
+  ("shs" "শ্স")
+  
+  ("sk" "স্ক")
+  ("sT" "স্ট")
+  ("sn" "স্ন")
+  ("sm" "স্ম")
+  ("sl" "স্ল")
+  
+  ("hh" "হ্হ")
+  ("hm" "হ্ম")
+  ("hn" "হ্ন")
+  ("hl" "হ্ল")
+  
+  ("khy" "খ্য")
+  ("phl" "ফ্ল")
+  
+  ;; Ra-phala conjuncts
+  ("rk" "র্ক")
+  ("rg" "র্গ")
+  ("rN" "র্ণ")
+  ("rT" "র্ট")
+  ("rD" "র্ড")
+  ("rt" "র্ত")
+  ("rd" "র্দ")
+  ("rn" "র্ন")
+  ("rm" "র্ম")
+  ("rl" "র্ল")
+  ("rs" "র্স")
+  
+  ;; Three-character conjuncts
+  ("ksh" "ক্ষ")
+  ("str" "স্ত্র")
+  ("sth" "স্থ")
+  ("skh" "স্খ")
+  
+  ;; Numerals
+  ("0" "০")
+  ("1" "১")
+  ("2" "২")
+  ("3" "৩")
+  ("4" "৪")
+  ("5" "৫")
+  ("6" "৬")
+  ("7" "৭")
+  ("8" "৮")
+  ("9" "৯")
+  
+  ;; Punctuation
+  ("." "।")
+  ("," ",")
+  ("?" "?")
+  ("!" "!")
+  (";" ";")
+  (":" ":")
+  ("-" "-")
+  
+  ;; Special
+  ("ng1" "ং")
+ )
+ 
+ (group
+  (trans
+   (kbd "a")
+   (a)
+  )
+ )
+)
+
+;; State machine for vowel handling
+(state
+  (init
+    (trans "a" "আ")
+    (trans "A" "আ")
+    (trans "aa" "আ")
+    (trans "i" "ই")
+    (trans "I" "ঈ")
+    (trans "u" "উ")
+    (trans "U" "ঊ")
+    (trans "e" "এ")
+    (trans "o" "ও")
+    (trans "k" "ক")
+    (trans "K" "খ")
+    (trans "g" "গ")
+    (trans "c" "চ")
+    (trans "j" "জ")
+    (trans "T" "ট")
+    (trans "t" "ত")
+    (trans "d" "দ")
+    (trans "n" "ন")
+    (trans "p" "প")
+    (trans "b" "ব")
+    (trans "v" "ভ")
+    (trans "m" "ম")
+    (trans "y" "য")
+    (trans "r" "র")
+    (trans "l" "ল")
+    (trans "s" "স")
+    (trans "S" "শ")
+    (trans "h" "হ")
+  )
+)
+
+;; MIT License
+;; Copyright (c) 2024 BanglaWriter Project

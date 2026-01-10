@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component>
+    <version>1.0.0</version>
+    <name>com.banglawriter</name>
+    <description>BanglaWriter - Bangla Input Method for Linux</description>
+    <author>MiniMax Agent</author>
+    <license>SIL Open Font License 1.1</license>
+    <homepage>https://github.com/minimax-agent/bangla-writer</homepage>
+    
+    <engines>
+        <engine>
+            <name>banglawriter</name>
+            <language>bn</language>
+            <symbol>ব</symbol>
+            <author>MiniMax Agent</author>
+            <license>SIL Open Font License 1.1</license>
+            <description>Phonetic Bangla transliteration input method</description>
+            <layout>default</layout>
+        </engine>
+    </engines>
+    
+    <components>
+        <component>
+            <name>BanglaWriter Setup</name>
+            <description>BanglaWriter Configuration Tool</description>
+            <type>setup</type>
+            <exe>/usr/bin/banglawriter-setup</exe>
+            <icon>/usr/share/banglawriter/icons/banglawriter.svg</icon>
+        </component>
+    </components>
+</component>
