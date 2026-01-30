@@ -152,13 +152,13 @@ install_dependencies() {
     print_step "Installing dependencies for ${DISTRO^}..."
     
     case "$PACKAGE_MANAGER" in
-        apt)
+                apt)
             run_command apt-get update -qq
             run_command apt-get install -y -qq \
                 ibus \
                 ibus-m17n \
                 m17n-db \
-                m17n-lib \
+                libm17n-0 \
                 fontconfig \
                 git \
                 make
