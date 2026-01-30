@@ -98,11 +98,12 @@ check_permissions() {
 # Execute command with proper permissions
 run_command() {
     if [ "$IS_ROOT" = true ]; then
-        eval "$@"
+        "$@"
     else
-        sudo eval "$@"
+        sudo "$@"
     fi
 }
+
 
 # Detect Linux distribution
 detect_distro() {
