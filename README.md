@@ -1,6 +1,6 @@
 # BanglaWriter - Bangla Input Method for Linux
 
-**⚠️ i dont recommend you to install that software now. its in under development and has mich much issues. install.sh file still giving errors. I hope i can release it as soon as possible**
+**⚠️ i dont recommend you to installing that software now. its in under development and has much much issues. install.sh file still giving errors.So, I hope i can release it as soon as possible**
 
 A production-ready Bangla input method for Linux that converts Romanized Bengali to proper Bangla script using phonetic transliteration.
 
